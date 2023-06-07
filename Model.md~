@@ -412,7 +412,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(2137, 964)
+			location   	(2149, 986)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -424,7 +424,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@3
-			    location   	(1994, 780)
+			    location   	(2006, 802)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	286
@@ -432,7 +432,7 @@
 			    label      	"VienChuc")
 			stereotype 	(object ItemLabel
 			    Parent_View 	@3
-			    location   	(1994, 730)
+			    location   	(2006, 752)
 			    fill_color 	13434879
 			    anchor     	10
 			    nlines     	1
@@ -445,7 +445,7 @@
 			quidu      	"568BF6ED0233"
 			compartment 	(object Compartment
 			    Parent_View 	@3
-			    location   	(1994, 841)
+			    location   	(2006, 863)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -466,14 +466,14 @@
 			annotation 	8
 			autoResize 	TRUE)
 		    (object AssociationViewNew "$UNNAMED$0" @4
-			location   	(2143, 588)
+			location   	(2149, 599)
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"568BF8C10187"
 			roleview_list 	(list RoleViews
 			    (object RoleView "$UNNAMED$1" @5
 				Parent_View 	@4
-				location   	(216, 390)
+				location   	(222, 401)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -489,12 +489,12 @@
 				client     	@4
 				supplier   	@3
 				vertices   	(list Points
-				    (2143, 588)
-				    (2141, 717))
+				    (2149, 599)
+				    (2149, 739))
 				line_style 	0
 				label      	(object SegLabel @6
 				    Parent_View 	@5
-				    location   	(2177, 664)
+				    location   	(2184, 681)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -515,7 +515,7 @@
 				    orientation 	0))
 			    (object RoleView "$UNNAMED$2" @7
 				Parent_View 	@4
-				location   	(216, 390)
+				location   	(222, 401)
 				font       	(object Font
 				    size       	10
 				    face       	"Arial"
@@ -531,12 +531,12 @@
 				client     	@4
 				supplier   	@2
 				vertices   	(list Points
-				    (2143, 588)
-				    (2146, 460))
+				    (2149, 599)
+				    (2150, 460))
 				line_style 	0
 				label      	(object SegLabel @8
 				    Parent_View 	@7
-				    location   	(2181, 485)
+				    location   	(2186, 486)
 				    font       	(object Font
 					size       	10
 					face       	"Arial"
@@ -833,8 +833,8 @@
 			client     	@3
 			supplier   	@16
 			vertices   	(list Points
-			    (1984, 860)
-			    (1629, 621))
+			    (1996, 878)
+			    (1629, 625))
 			line_style 	0)
 		    (object ClassView "Class" "Logical View::HoSo" @19
 			ShowCompartmentStereotypes 	TRUE

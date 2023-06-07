@@ -8,23 +8,23 @@ package Model;
  *
  * @author Hoang
  */
-public class VienChuc extends NhanSu {
+public class ChuyenVien extends NhanSu {
 
     private PhongBan phongBan;
     private int soNgayLam;
     private final long donGia = 250000l;
 
-    public VienChuc() {
+    public ChuyenVien() {
         super();
     }
 
-    public VienChuc(PhongBan phongBan, int soNgayLam) {
+    public ChuyenVien(PhongBan phongBan, int soNgayLam) {
         this.maNhanSu = id++;
         this.phongBan = phongBan;
         this.soNgayLam = soNgayLam;
     }
 
-    public VienChuc(String hoTen, String gioiTinh, Integer namSinh, String diaChi, HoSo hoSo, PhongBan phongBan, int soNgayLam) {
+    public ChuyenVien(String hoTen, String gioiTinh, Integer namSinh, String diaChi, HoSo hoSo, PhongBan phongBan, int soNgayLam) {
         super(hoTen, gioiTinh, namSinh, diaChi, hoSo);
         this.phongBan = phongBan;
         this.soNgayLam = soNgayLam;
