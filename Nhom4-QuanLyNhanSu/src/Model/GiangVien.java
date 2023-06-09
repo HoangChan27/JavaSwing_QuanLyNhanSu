@@ -12,22 +12,29 @@ public class GiangVien extends NhanSu {
 
     private Khoa khoa;
     private int soTietDay;
-    private final long donGia = 100000l;
+    private long donGia;
 
     public GiangVien() {
         super();
+        soTietDay = 0;
+        donGia = 0;
     }
 
-    public GiangVien(Khoa khoa, int soTietDay) {
-        this.maNhanSu = id++;
+    public GiangVien(Khoa khoa) {
+        this.khoa = khoa;
+    }
+    
+    public GiangVien(Khoa khoa, int soTietDay, long donGia) {
         this.khoa = khoa;
         this.soTietDay = soTietDay;
+        this.donGia = donGia;
     }
 
-    public GiangVien(String hoTen, String gioiTinh, Integer namSinh, String diaChi, HoSo hoSo, Khoa khoa, int soTietDay) {
-        super(hoTen, gioiTinh, namSinh, diaChi, hoSo);
+    public GiangVien(String maNhanSu, String hoTen, String gioiTinh, Integer namSinh, String diaChi, Khoa khoa, int soTietDay, long donGia) {
+        super(maNhanSu, hoTen, gioiTinh, namSinh, diaChi);
         this.khoa = khoa;
         this.soTietDay = soTietDay;
+        this.donGia = donGia;
     }
 
     public Khoa getKhoa() {
@@ -58,6 +65,25 @@ public class GiangVien extends NhanSu {
             }
         }
         this.soTietDay = soTietDay;
+    }
+
+    public long getDonGia() {
+        return donGia;
+    }
+
+    public void setDonGia(Long donGia) throws Exception {
+        if (donGia.toString().trim().isEmpty()) {
+            throw new Exception("Đơn giá không được trống!");
+        } else {
+            if (donGia.toString().matches("\\d+")) {
+                throw new Exception("Đơn giá chỉ được chứa số!");
+            } else {
+                if (donGia < 50000) {
+                    throw new Exception("Đơn giá phải >= 50000!");
+                }
+            }
+        }
+        this.donGia = donGia;
     }
 
     @Override

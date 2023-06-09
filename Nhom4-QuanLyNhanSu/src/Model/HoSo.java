@@ -19,13 +19,14 @@ public class HoSo {
     private String diaChi;
     private String trinhDo; // cao dang - dai hoc - thac si - tien si
     private String viTriUngTuyen; // giang vien - vien chuc
+    private String trangThai;
     private static int id = 1;
 
     public HoSo() {
         this.maHoSo = id++;
     }
 
-    public HoSo(String hoTen, String gioiTinh, int namSinh, String diaChi, String trinhDo, String viTriUngTuyen) {
+    public HoSo(String hoTen, String gioiTinh, int namSinh, String diaChi, String trinhDo, String viTriUngTuyen, String trangThai) {
         this.maHoSo = id++;
         this.hoTen = hoTen;
         this.gioiTinh = gioiTinh;
@@ -33,6 +34,7 @@ public class HoSo {
         this.diaChi = diaChi;
         this.trinhDo = trinhDo;
         this.viTriUngTuyen = viTriUngTuyen;
+        this.trangThai = trangThai;
     }
 
     public int getMaHoSo() {
@@ -121,4 +123,35 @@ public class HoSo {
         }
         this.viTriUngTuyen = viTriUngTuyen;
     }
+
+    public String getTrangThai() {
+        return trangThai;
+    }
+
+    public void setTrangThai(String trangThai) {
+        this.trangThai = trangThai;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 17 * hash + this.maHoSo;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final HoSo other = (HoSo) obj;
+        return this.maHoSo == other.maHoSo;
+    }
+ 
 }

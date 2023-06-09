@@ -12,5 +12,6 @@ import javax.swing.table.DefaultTableModel;
  * @author Hoang
  */
 public interface View {
-    <T> void showData(List<T> list, DefaultTableModel model);
+    <T> void showDataTinTuyenDung(List<T> list, DefaultTableModel model);
+
 }

@@ -4,6 +4,8 @@
  */
 package Model;
 
+import java.util.HashSet;
+
 /**
  *
  * @author Hoang
@@ -12,13 +14,16 @@ public class Khoa {
 
     private String maKhoa;
     private String tenKhoa;
+    private HashSet<GiangVien> danhSachGiangVien;
 
     public Khoa() {
+        danhSachGiangVien = new HashSet<>();
     }
 
     public Khoa(String maKhoa, String tenKhoa) {
         this.maKhoa = maKhoa;
         this.tenKhoa = tenKhoa;
+        danhSachGiangVien = new HashSet<>();
     }
 
     public String getMaKhoa() {
@@ -43,4 +48,15 @@ public class Khoa {
         this.tenKhoa = tenKhoa;
     }
 
+    public void themGiangVien(GiangVien gv) {
+        danhSachGiangVien.add(gv);
+    }
+    
+    public void xoaGiangVien(GiangVien gv) {
+        danhSachGiangVien.remove(gv);
+    }
+
+    public HashSet<GiangVien> getDanhSachGiangVien() {
+        return danhSachGiangVien;
+    }    
 }

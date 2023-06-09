@@ -5,6 +5,7 @@
 package Model;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 /**
  *
@@ -12,20 +13,26 @@ import java.time.LocalDate;
  */
 public abstract class NhanSu {
 
-    protected int maNhanSu; // ma nhan su tu dong tang
+    protected String maNhanSu;
     protected String hoTen;
     protected String gioiTinh;
     protected int namSinh;
     protected String diaChi;
     protected HoSo hoSo;
-    protected static int id = 1;
 
     public NhanSu() {
-        this.maNhanSu = id++;
     }
 
-    public NhanSu(String hoTen, String gioiTinh, Integer namSinh, String diaChi, HoSo hoSo) {
-        this.maNhanSu = id++;
+    public NhanSu(String maNhanSu, String hoTen, String gioiTinh, Integer namSinh, String diaChi) {
+        this.maNhanSu = maNhanSu;
+        this.hoTen = hoTen;
+        this.gioiTinh = gioiTinh;
+        this.namSinh = namSinh;
+        this.diaChi = diaChi;
+    }
+    
+    public NhanSu(String maNhanSu, String hoTen, String gioiTinh, Integer namSinh, String diaChi, HoSo hoSo) {
+        this.maNhanSu = maNhanSu;
         this.hoTen = hoTen;
         this.gioiTinh = gioiTinh;
         this.namSinh = namSinh;
@@ -33,8 +40,15 @@ public abstract class NhanSu {
         this.hoSo = hoSo;
     }
 
-    public int getMaNhanSu() {
+    public String getMaNhanSu() {
         return maNhanSu;
+    }
+
+    public void setMaNhanSu(String maNhanSu) throws Exception {
+        if (hoTen.trim().isEmpty()) {
+            throw new Exception("Mã nhân sự không được để trống!");
+        }
+        this.maNhanSu = maNhanSu;
     }
 
     public String getHoTen() {
@@ -98,6 +112,36 @@ public abstract class NhanSu {
         this.diaChi = diaChi;
     }
 
+    public HoSo getHoSo() {
+        return hoSo;
+    }
+
+    public void setHoSo(HoSo hoSo) {
+        this.hoSo = hoSo;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 47 * hash + Objects.hashCode(this.maNhanSu);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final NhanSu other = (NhanSu) obj;
+        return Objects.equals(this.maNhanSu, other.maNhanSu);
+    }
+    
     public abstract long khenThuong();
 
     public abstract long kyLuat();

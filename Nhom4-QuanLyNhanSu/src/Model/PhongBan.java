@@ -4,6 +4,8 @@
  */
 package Model;
 
+import java.util.HashSet;
+
 /**
  *
  * @author Hoang
@@ -12,13 +14,16 @@ public class PhongBan {
 
     private String maPhongBan;
     private String tenPhongBan;
+    private HashSet<ChuyenVien> danhsachChuyenVien;
 
     public PhongBan() {
+        danhsachChuyenVien = new HashSet<>();
     }
-
+    
     public PhongBan(String maPhongBan, String tenPhongBan) {
         this.maPhongBan = maPhongBan;
         this.tenPhongBan = tenPhongBan;
+        danhsachChuyenVien = new HashSet<>();
     }
 
     public String getMaPhongBan() {
@@ -43,4 +48,15 @@ public class PhongBan {
         this.tenPhongBan = tenPhongBan;
     }
 
+    public void themChuyenVien(ChuyenVien cv) {
+        danhsachChuyenVien.add(cv);
+    }
+    
+    public void xoaChuyenVien(ChuyenVien cv) {
+        danhsachChuyenVien.remove(cv);
+    }
+
+    public HashSet<ChuyenVien> getDanhSachChuyenVien() {
+        return danhsachChuyenVien;
+    } 
 }

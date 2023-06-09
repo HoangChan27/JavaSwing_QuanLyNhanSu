@@ -12,22 +12,27 @@ public class ChuyenVien extends NhanSu {
 
     private PhongBan phongBan;
     private int soNgayLam;
-    private final long donGia = 250000l;
+    private long luongMotNgay;
 
     public ChuyenVien() {
         super();
     }
 
-    public ChuyenVien(PhongBan phongBan, int soNgayLam) {
-        this.maNhanSu = id++;
+    public ChuyenVien(PhongBan phongBan) {
+        this.phongBan = phongBan;
+    }
+    
+    public ChuyenVien(PhongBan phongBan, int soNgayLam, long luongMotNgay) {
         this.phongBan = phongBan;
         this.soNgayLam = soNgayLam;
+        this.luongMotNgay = luongMotNgay;
     }
 
-    public ChuyenVien(String hoTen, String gioiTinh, Integer namSinh, String diaChi, HoSo hoSo, PhongBan phongBan, int soNgayLam) {
-        super(hoTen, gioiTinh, namSinh, diaChi, hoSo);
+    public ChuyenVien(String maNhanSu, String hoTen, String gioiTinh, int namSinh, String diaChi, HoSo hoSo, PhongBan phongBan, int soNgayLam, long luongMotNgay) {
+        super(maNhanSu, hoTen, gioiTinh, namSinh, diaChi);
         this.phongBan = phongBan;
         this.soNgayLam = soNgayLam;
+        this.luongMotNgay = luongMotNgay;
     }
 
     public PhongBan getPhongBan() {
@@ -60,6 +65,25 @@ public class ChuyenVien extends NhanSu {
         this.soNgayLam = soNgayLam;
     }
 
+    public long getLuongMotNgay() {
+        return luongMotNgay;
+    }
+
+    public void setLuongMotNgay(Long luongMotNgay) throws Exception {
+        if (luongMotNgay.toString().trim().isEmpty()) {
+            throw new Exception("Lương một ngày không được trống!");
+        } else {
+            if (luongMotNgay.toString().matches("\\d+")) {
+                throw new Exception("Lương một ngày chỉ được chứa số!");
+            } else {
+                if (luongMotNgay < 150000) {
+                    throw new Exception("Lương một ngày phải >= 150000!");
+                }
+            }
+        }
+        this.luongMotNgay = luongMotNgay;
+    }
+
     @Override
     public long khenThuong() {
         if (soNgayLam >= 28) {
@@ -82,6 +106,6 @@ public class ChuyenVien extends NhanSu {
 
     @Override
     public long tinhLuong() {
-        return soNgayLam * donGia + khenThuong() - kyLuat();
+        return soNgayLam * luongMotNgay + khenThuong() - kyLuat();
     }
 }

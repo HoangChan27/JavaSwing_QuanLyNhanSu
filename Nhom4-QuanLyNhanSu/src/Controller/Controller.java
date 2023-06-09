@@ -11,7 +11,7 @@ import java.util.List;
  * @author Hoang
  */
 public interface Controller {
-    <T> void writeToFile(List<T> list, String fileName);
+    <T> void ghiFile(List<T> list, String fileName);
     
-    <T> List<T> readDataFromFile(String fileName);
+    <T> List<T> docFile(String fileName);
 }
