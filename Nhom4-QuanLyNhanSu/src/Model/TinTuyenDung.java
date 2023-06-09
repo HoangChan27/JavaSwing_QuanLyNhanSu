@@ -4,13 +4,13 @@
  */
 package Model;
 
-import java.util.Date;
+import java.io.Serializable;
 
 /**
  *
  * @author Hoang
  */
-public class TinTuyenDung {
+public class TinTuyenDung implements Serializable {
 
     private int maTin; // ma tin tuyen dung tu dong tang
     private String viTri;

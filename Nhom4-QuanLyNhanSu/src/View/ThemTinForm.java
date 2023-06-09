@@ -52,7 +52,6 @@ public class ThemTinForm extends javax.swing.JDialog {
         jLabel1 = new javax.swing.JLabel();
         btnThemMoi = new javax.swing.JButton();
         btnLamMoi = new javax.swing.JButton();
-        btnQuayLai = new javax.swing.JButton();
         txtYeuCau = new javax.swing.JTextField();
         labelErrorViTri = new javax.swing.JLabel();
         labelErrorYeuCau = new javax.swing.JLabel();
@@ -101,14 +100,6 @@ public class ThemTinForm extends javax.swing.JDialog {
             }
         });
 
-        btnQuayLai.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnQuayLai.setText("Quay lại");
-        btnQuayLai.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnQuayLaiActionPerformed(evt);
-            }
-        });
-
         txtYeuCau.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         labelErrorViTri.setForeground(new java.awt.Color(255, 0, 51));
@@ -142,10 +133,7 @@ public class ThemTinForm extends javax.swing.JDialog {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtViTri, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtYeuCau, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtSoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtSoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(labelErrorViTri)
                             .addComponent(labelErrorYeuCau))
                         .addGap(0, 0, Short.MAX_VALUE))))
@@ -164,21 +152,14 @@ public class ThemTinForm extends javax.swing.JDialog {
                                 .addComponent(btnLamMoi))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(196, 196, 196)
-                        .addComponent(jLabel1)
-                        .addGap(109, 109, 109)
-                        .addComponent(btnQuayLai)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel1)))
+                .addGap(136, 136, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnQuayLai))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel1)))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addComponent(labelErrorViTri)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -203,11 +184,11 @@ public class ThemTinForm extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtHanNop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
-                .addGap(66, 66, 66)
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnThemMoi)
                     .addComponent(btnLamMoi))
-                .addGap(66, 66, 66))
+                .addGap(103, 103, 103))
         );
 
         pack();
@@ -280,10 +261,6 @@ public class ThemTinForm extends javax.swing.JDialog {
         labelErrorHanNop.setVisible(false);
     }//GEN-LAST:event_btnLamMoiActionPerformed
 
-    private void btnQuayLaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuayLaiActionPerformed
-        this.dispose();
-    }//GEN-LAST:event_btnQuayLaiActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -329,7 +306,6 @@ public class ThemTinForm extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLamMoi;
-    private javax.swing.JButton btnQuayLai;
     private javax.swing.JButton btnThemMoi;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

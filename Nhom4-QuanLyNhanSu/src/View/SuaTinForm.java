@@ -181,7 +181,7 @@ public class SuaTinForm extends javax.swing.JDialog {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(jLabel1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtMaTin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -209,11 +209,11 @@ public class SuaTinForm extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtHanNop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
-                .addGap(66, 66, 66)
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCapNhat)
                     .addComponent(btnLamMoi))
-                .addGap(26, 26, 26))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
 
         pack();
@@ -335,6 +335,15 @@ public class SuaTinForm extends javax.swing.JDialog {
         });
     }
 
+    // lấy dữ liệu của bản ghi được chọn từ modelTinTD
+    public void setEditData(TinTuyenDung tin) {
+        txtMaTin.setText(tin.getMaTin() + "");
+        txtViTri.setText(tin.getViTri());
+        txtYeuCau.setText(tin.getYeuCau());
+        txtSoLuong.setText(tin.getSoLuong() + "");
+        txtHanNop.setText(tin.getHanNopHoSo() + "");
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCapNhat;
     private javax.swing.JButton btnLamMoi;
@@ -356,12 +365,4 @@ public class SuaTinForm extends javax.swing.JDialog {
     private javax.swing.JTextField txtYeuCau;
     // End of variables declaration//GEN-END:variables
     
-    // lấy dữ liệu được chọn
-    public void setEditData(TinTuyenDung tin) {
-        txtMaTin.setText(tin.getMaTin() + "");
-        txtViTri.setText(tin.getViTri());
-        txtYeuCau.setText(tin.getYeuCau());
-        txtSoLuong.setText(tin.getSoLuong() + "");
-        txtHanNop.setText(tin.getHanNopHoSo() + "");
-    }
 }

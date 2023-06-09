@@ -4,19 +4,19 @@
  */
 package Model;
 
-import java.time.LocalDate;
+import java.io.Serializable;
 
 /**
  *
  * @author Hoang
  */
-public class HoSo {
+public class HoSo implements Serializable {
 
     private int maHoSo; // ma ho so tu dong tang
     private String hoTen;
     private String gioiTinh;
-    private int namSinh;
     private String diaChi;
+    private int namSinh;
     private String trinhDo; // cao dang - dai hoc - thac si - tien si
     private String viTriUngTuyen; // giang vien - vien chuc
     private String trangThai;
@@ -26,19 +26,31 @@ public class HoSo {
         this.maHoSo = id++;
     }
 
-    public HoSo(String hoTen, String gioiTinh, int namSinh, String diaChi, String trinhDo, String viTriUngTuyen, String trangThai) {
+    public HoSo(String hoTen, String gioiTinh, String diaChi, int namSinh, String trinhDo, String viTriUngTuyen, String trangThai) {
         this.maHoSo = id++;
         this.hoTen = hoTen;
         this.gioiTinh = gioiTinh;
-        this.namSinh = namSinh;
         this.diaChi = diaChi;
+        this.namSinh = namSinh;
         this.trinhDo = trinhDo;
         this.viTriUngTuyen = viTriUngTuyen;
         this.trangThai = trangThai;
     }
 
+    public static int getId() {
+        return id;
+    }
+
+    public static void setId(int id) {
+        HoSo.id = id;
+    }
+
     public int getMaHoSo() {
         return maHoSo;
+    }
+
+    public void setMaHoSo(int maHoSo) {
+        this.maHoSo = maHoSo;
     }
 
     public String getHoTen() {
@@ -46,13 +58,6 @@ public class HoSo {
     }
 
     public void setHoTen(String hoTen) throws Exception {
-        if (hoTen.trim().isEmpty()) {
-            throw new Exception("Họ tên không được để trống!");
-        } else {
-            if (hoTen.matches("[^a-zA-Z]+")) {
-                throw new Exception("Họ tên chỉ được chứa chữ!");
-            }
-        }
         this.hoTen = hoTen;
     }
 
@@ -60,56 +65,31 @@ public class HoSo {
         return gioiTinh;
     }
 
-    public void setGioiTinh(String gioiTinh) throws Exception {
-        if (gioiTinh.trim().isEmpty()) {
-            throw new Exception("Giới tính không được để trống!");
-        } else {
-            if (gioiTinh.matches("[^a-zA-Z]+")) {
-                throw new Exception("Giới tính chỉ được chứa chữ!");
-            }
-        }
-
+    public void setGioiTinh(String gioiTinh) {
         this.gioiTinh = gioiTinh;
-    }
-
-    public int getNamSinh() {
-        return namSinh;
-    }
-
-    public void setNamSinh(Integer namSinh) throws Exception {
-        if (namSinh.toString().trim().isEmpty()) {
-            throw new Exception("Năm sinh không được trống!");
-        } else {
-            if (namSinh.toString().matches("\\d+")) {
-                throw new Exception("Năm sinh chỉ được chứa số!");
-            } else {
-                if ((LocalDate.now().getYear() - namSinh) < 24) {
-                    throw new Exception("Năm sinh không phù hợp (Tuổi phải >= 24)");
-                }
-            }
-        }
-        this.namSinh = namSinh;
     }
 
     public String getDiaChi() {
         return diaChi;
     }
 
-    public void setDiaChi(String diaChi) throws Exception {
-        if (diaChi.trim().isEmpty()) {
-            throw new Exception("Địa chỉ không được để trống!");
-        }
+    public void setDiaChi(String diaChi) {
         this.diaChi = diaChi;
     }
 
+    public int getNamSinh() {
+        return namSinh;
+    }
+
+    public void setNamSinh(int namSinh) {
+        this.namSinh = namSinh;
+    }
+    
     public String getTrinhDo() {
         return trinhDo;
     }
 
-    public void setTrinhDo(String trinhDo) throws Exception {
-        if (trinhDo.trim().isEmpty()) {
-            throw new Exception("Trình độ không được để trống!");
-        }
+    public void setTrinhDo(String trinhDo) {
         this.trinhDo = trinhDo;
     }
 
@@ -117,10 +97,7 @@ public class HoSo {
         return viTriUngTuyen;
     }
 
-    public void setViTriUngTuyen(String viTriUngTuyen) throws Exception {
-        if (viTriUngTuyen.trim().isEmpty()) {
-            throw new Exception("Vị trí ứng tuyển không được để trống!");
-        }
+    public void setViTriUngTuyen(String viTriUngTuyen) {
         this.viTriUngTuyen = viTriUngTuyen;
     }
 
