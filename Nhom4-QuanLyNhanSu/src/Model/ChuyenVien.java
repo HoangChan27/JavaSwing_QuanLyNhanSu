@@ -4,13 +4,15 @@
  */
 package Model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Hoang
  */
-public class ChuyenVien extends NhanSu {
+public class ChuyenVien extends NhanSu implements Serializable {
 
-    private PhongBan phongBan;
+    private String phongBan;
     private int soNgayLam;
     private long luongMotNgay;
 
@@ -18,31 +20,21 @@ public class ChuyenVien extends NhanSu {
         super();
     }
 
-    public ChuyenVien(PhongBan phongBan) {
+    public ChuyenVien(String phongBan) {
         this.phongBan = phongBan;
     }
     
-    public ChuyenVien(PhongBan phongBan, int soNgayLam, long luongMotNgay) {
+    public ChuyenVien(String phongBan, int soNgayLam, long luongMotNgay) {
         this.phongBan = phongBan;
         this.soNgayLam = soNgayLam;
         this.luongMotNgay = luongMotNgay;
     }
 
-    public ChuyenVien(String maNhanSu, String hoTen, String gioiTinh, int namSinh, String diaChi, HoSo hoSo, PhongBan phongBan, int soNgayLam, long luongMotNgay) {
-        super(maNhanSu, hoTen, gioiTinh, namSinh, diaChi);
-        this.phongBan = phongBan;
-        this.soNgayLam = soNgayLam;
-        this.luongMotNgay = luongMotNgay;
-    }
-
-    public PhongBan getPhongBan() {
+    public String getPhongBan() {
         return phongBan;
     }
 
-    public void setPhongBan(PhongBan phongBan) throws Exception {
-        if (phongBan == null) {
-            throw new Exception("Phòng ban không được để trống!");
-        }
+    public void setPhongBan(String phongBan){
         this.phongBan = phongBan;
     }
 
@@ -50,18 +42,7 @@ public class ChuyenVien extends NhanSu {
         return soNgayLam;
     }
 
-    public void setSoNgayLam(Integer soNgayLam) throws Exception {
-        if (soNgayLam.toString().trim().isEmpty()) {
-            throw new Exception("Số ngày làm không được trống!");
-        } else {
-            if (soNgayLam.toString().matches("\\d+")) {
-                throw new Exception("Số ngày làm chỉ được chứa số!");
-            } else {
-                if (soNgayLam < 0 || soNgayLam > 31) {
-                    throw new Exception("Số ngày làm phải >= 0 và <= 31!");
-                }
-            }
-        }
+    public void setSoNgayLam(Integer soNgayLam) {
         this.soNgayLam = soNgayLam;
     }
 
@@ -69,18 +50,7 @@ public class ChuyenVien extends NhanSu {
         return luongMotNgay;
     }
 
-    public void setLuongMotNgay(Long luongMotNgay) throws Exception {
-        if (luongMotNgay.toString().trim().isEmpty()) {
-            throw new Exception("Lương một ngày không được trống!");
-        } else {
-            if (luongMotNgay.toString().matches("\\d+")) {
-                throw new Exception("Lương một ngày chỉ được chứa số!");
-            } else {
-                if (luongMotNgay < 150000) {
-                    throw new Exception("Lương một ngày phải >= 150000!");
-                }
-            }
-        }
+    public void setLuongMotNgay(Long luongMotNgay) {
         this.luongMotNgay = luongMotNgay;
     }
 

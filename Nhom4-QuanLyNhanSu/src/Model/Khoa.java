@@ -4,15 +4,16 @@
  */
 package Model;
 
+import java.io.Serializable;
 import java.util.HashSet;
+import java.util.Objects;
 
 /**
  *
  * @author Hoang
  */
-public class Khoa {
+public class Khoa implements Serializable {
 
-    private String maKhoa;
     private String tenKhoa;
     private HashSet<GiangVien> danhSachGiangVien;
 
@@ -20,31 +21,16 @@ public class Khoa {
         danhSachGiangVien = new HashSet<>();
     }
 
-    public Khoa(String maKhoa, String tenKhoa) {
-        this.maKhoa = maKhoa;
+    public Khoa(String tenKhoa) {
         this.tenKhoa = tenKhoa;
         danhSachGiangVien = new HashSet<>();
-    }
-
-    public String getMaKhoa() {
-        return maKhoa;
-    }
-
-    public void setMaKhoa(String maKhoa) throws Exception {
-        if (maKhoa.trim().isEmpty()) {
-            throw new Exception("Mã khoa không được để trống!");
-        }
-        this.maKhoa = maKhoa;
     }
 
     public String getTenKhoa() {
         return tenKhoa;
     }
 
-    public void setTenKhoa(String tenKhoa) throws Exception {
-        if (tenKhoa.trim().isEmpty()) {
-            throw new Exception("Tên khoa không được để trống!");
-        }
+    public void setTenKhoa(String tenKhoa) {
         this.tenKhoa = tenKhoa;
     }
 
@@ -58,5 +44,27 @@ public class Khoa {
 
     public HashSet<GiangVien> getDanhSachGiangVien() {
         return danhSachGiangVien;
-    }    
+    }   
+    
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 83 * hash + Objects.hashCode(this.tenKhoa);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Khoa other = (Khoa) obj;
+        return Objects.equals(this.tenKhoa, other.tenKhoa);
+    }
 }

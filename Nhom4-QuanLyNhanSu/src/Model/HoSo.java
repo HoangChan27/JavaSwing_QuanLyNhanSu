@@ -17,6 +17,7 @@ public class HoSo implements Serializable {
     private String gioiTinh;
     private String diaChi;
     private int namSinh;
+    private String sdt;
     private String trinhDo; // cao dang - dai hoc - thac si - tien si
     private String viTriUngTuyen; // giang vien - vien chuc
     private String trangThai;
@@ -25,16 +26,18 @@ public class HoSo implements Serializable {
     public HoSo() {
         this.maHoSo = id++;
     }
-
-    public HoSo(String hoTen, String gioiTinh, String diaChi, int namSinh, String trinhDo, String viTriUngTuyen, String trangThai) {
+    
+    public HoSo(String hoTen, String gioiTinh, String diaChi, int namSinh, String sdt,
+            String trinhDo, String viTriUngTuyen) {
         this.maHoSo = id++;
         this.hoTen = hoTen;
         this.gioiTinh = gioiTinh;
         this.diaChi = diaChi;
         this.namSinh = namSinh;
+        this.sdt = sdt;
         this.trinhDo = trinhDo;
         this.viTriUngTuyen = viTriUngTuyen;
-        this.trangThai = trangThai;
+        this.trangThai = "Chờ phê duyệt";
     }
 
     public static int getId() {
@@ -57,7 +60,7 @@ public class HoSo implements Serializable {
         return hoTen;
     }
 
-    public void setHoTen(String hoTen) throws Exception {
+    public void setHoTen(String hoTen) {
         this.hoTen = hoTen;
     }
 
@@ -83,6 +86,14 @@ public class HoSo implements Serializable {
 
     public void setNamSinh(int namSinh) {
         this.namSinh = namSinh;
+    }
+
+    public String getSdt() {
+        return sdt;
+    }
+
+    public void setSdt(String sdt) {
+        this.sdt = sdt;
     }
     
     public String getTrinhDo() {

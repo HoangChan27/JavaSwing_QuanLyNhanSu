@@ -4,15 +4,16 @@
  */
 package Model;
 
+import java.io.Serializable;
 import java.util.HashSet;
+import java.util.Objects;
 
 /**
  *
  * @author Hoang
  */
-public class PhongBan {
+public class PhongBan implements Serializable {
 
-    private String maPhongBan;
     private String tenPhongBan;
     private HashSet<ChuyenVien> danhsachChuyenVien;
 
@@ -20,32 +21,39 @@ public class PhongBan {
         danhsachChuyenVien = new HashSet<>();
     }
     
-    public PhongBan(String maPhongBan, String tenPhongBan) {
-        this.maPhongBan = maPhongBan;
+    public PhongBan(String tenPhongBan) {
         this.tenPhongBan = tenPhongBan;
         danhsachChuyenVien = new HashSet<>();
-    }
-
-    public String getMaPhongBan() {
-        return maPhongBan;
-    }
-
-    public void setMaPhongBan(String maPhongBan) throws Exception {
-        if (maPhongBan.trim().isEmpty()) {
-            throw new Exception("Mã phòng ban không được để trống!");
-        }
-        this.maPhongBan = maPhongBan;
     }
 
     public String getTenPhongBan() {
         return tenPhongBan;
     }
 
-    public void setTenPhongBan(String tenPhongBan) throws Exception {
-        if (tenPhongBan.trim().isEmpty()) {
-            throw new Exception("Tên phòng ban không được để trống!");
-        }
+    public void setTenPhongBan(String tenPhongBan) {
         this.tenPhongBan = tenPhongBan;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 97 * hash + Objects.hashCode(this.tenPhongBan);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final PhongBan other = (PhongBan) obj;
+        return Objects.equals(this.tenPhongBan, other.tenPhongBan);
     }
 
     public void themChuyenVien(ChuyenVien cv) {

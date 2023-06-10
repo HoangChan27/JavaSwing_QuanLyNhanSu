@@ -151,6 +151,7 @@ public class DangNhapView extends javax.swing.JFrame {
             boolean isLogged = false;
             if (taiKhoan.equals("admin") && matKhau.equals("123")) {
                 TrangChuView trangChu = new TrangChuView();
+                trangChu.pack();
                 trangChu.setVisible(true);
                 this.dispose();
                 isLogged = true;

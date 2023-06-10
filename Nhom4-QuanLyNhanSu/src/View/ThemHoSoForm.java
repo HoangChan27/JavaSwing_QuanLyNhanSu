@@ -30,6 +30,7 @@ public class ThemHoSoForm extends javax.swing.JDialog {
         labelErrorHoTen.setVisible(false);
         labelErrorDiaChi.setVisible(false);
         labelErrorNamSinh.setVisible(false);
+        labelErrorSDT.setVisible(false);
     }
 
     /**
@@ -47,86 +48,55 @@ public class ThemHoSoForm extends javax.swing.JDialog {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        btnThemMoi = new javax.swing.JButton();
-        btnLamMoi = new javax.swing.JButton();
         txtHoTen = new javax.swing.JTextField();
         radGioiTinhNu = new javax.swing.JRadioButton();
         radGioiTinhNam = new javax.swing.JRadioButton();
         txtNamSinh = new javax.swing.JTextField();
         txtDiaChi = new javax.swing.JTextField();
-        cboTrinhDo = new javax.swing.JComboBox<>();
-        cboViTriUngTuyen = new javax.swing.JComboBox<>();
         labelErrorHoTen = new javax.swing.JLabel();
         labelErrorDiaChi = new javax.swing.JLabel();
         labelErrorNamSinh = new javax.swing.JLabel();
-        cboTrangThai = new javax.swing.JComboBox<>();
+        jLabel10 = new javax.swing.JLabel();
+        labelErrorSDT = new javax.swing.JLabel();
+        txtSDT = new javax.swing.JTextField();
+        cboTrinhDo = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        cboViTriUngTuyen = new javax.swing.JComboBox<>();
+        btnThemMoi = new javax.swing.JButton();
+        btnLamMoi = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
         jLabel1.setText("Thêm hồ sơ mới");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel2.setText("Họ tên:");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel3.setText("Giới tính:");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel4.setText("Năm sinh:");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel5.setText("Địa chỉ:");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel6.setText("Trình độ:");
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel7.setText("Vị trí ứng tuyển:");
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel8.setText("Trạng thái:");
-
-        btnThemMoi.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnThemMoi.setText("Thêm mới");
-        btnThemMoi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnThemMoiActionPerformed(evt);
-            }
-        });
-
-        btnLamMoi.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnLamMoi.setText("Làm mới");
-        btnLamMoi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLamMoiActionPerformed(evt);
-            }
-        });
-
-        txtHoTen.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtHoTen.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
         buttonGroupGioiTinh.add(radGioiTinhNu);
-        radGioiTinhNu.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        radGioiTinhNu.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         radGioiTinhNu.setText("Nữ");
 
         buttonGroupGioiTinh.add(radGioiTinhNam);
-        radGioiTinhNam.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        radGioiTinhNam.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         radGioiTinhNam.setText("Nam");
 
-        txtNamSinh.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtNamSinh.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         txtNamSinh.setText("1996");
 
-        txtDiaChi.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-
-        cboTrinhDo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        cboTrinhDo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cao đẳng", "Đại học", "Thạc sĩ", "Tiến sĩ", "Phó Giao sư", "Giáo sư" }));
-        cboTrinhDo.setSelectedIndex(1);
-
-        cboViTriUngTuyen.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        cboViTriUngTuyen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Giảng viên", "Chuyên viên" }));
+        txtDiaChi.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
         labelErrorHoTen.setForeground(new java.awt.Color(255, 0, 51));
         labelErrorHoTen.setText("Họ tên chỉ được chứa chữ cái!");
@@ -137,50 +107,96 @@ public class ThemHoSoForm extends javax.swing.JDialog {
         labelErrorNamSinh.setForeground(new java.awt.Color(255, 0, 51));
         labelErrorNamSinh.setText("Năm sinh chỉ được chứa số (sao cho tuổi >= 24)!");
 
-        cboTrangThai.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        cboTrangThai.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chờ duyệt", "Đã duyệt", "Loại" }));
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel10.setText("Số điện thoại:");
+
+        labelErrorSDT.setForeground(new java.awt.Color(255, 0, 51));
+        labelErrorSDT.setText("Số điện thoại không hợp lệ (phải có 10 chữ số)!");
+
+        txtSDT.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtSDT.setText("0123456789");
+
+        cboTrinhDo.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        cboTrinhDo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cao đẳng", "Đại học", "Thạc sĩ", "Tiến sĩ" }));
+        cboTrinhDo.setSelectedIndex(1);
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel6.setText("Trình độ:");
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel7.setText("Vị trí ứng tuyển:");
+
+        cboViTriUngTuyen.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        cboViTriUngTuyen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Giảng viên", "Chuyên viên" }));
+
+        btnThemMoi.setBackground(new java.awt.Color(102, 204, 0));
+        btnThemMoi.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        btnThemMoi.setForeground(new java.awt.Color(255, 255, 255));
+        btnThemMoi.setText("Thêm mới");
+        btnThemMoi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnThemMoiActionPerformed(evt);
+            }
+        });
+
+        btnLamMoi.setBackground(new java.awt.Color(153, 153, 153));
+        btnLamMoi.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        btnLamMoi.setForeground(new java.awt.Color(255, 255, 255));
+        btnLamMoi.setText("Làm mới");
+        btnLamMoi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLamMoiActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(179, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(179, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(50, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(radGioiTinhNu)
-                                .addGap(50, 50, 50)
-                                .addComponent(radGioiTinhNam))
-                            .addComponent(labelErrorHoTen)
-                            .addComponent(labelErrorDiaChi)
-                            .addComponent(labelErrorNamSinh)
-                            .addComponent(txtDiaChi)
-                            .addComponent(txtHoTen, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtNamSinh, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(cboTrinhDo, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cboViTriUngTuyen, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cboTrangThai, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(45, 45, 45)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(radGioiTinhNu)
+                                        .addGap(50, 50, 50)
+                                        .addComponent(radGioiTinhNam))
+                                    .addComponent(labelErrorHoTen)
+                                    .addComponent(labelErrorDiaChi)
+                                    .addComponent(labelErrorNamSinh)
+                                    .addComponent(txtDiaChi)
+                                    .addComponent(txtHoTen, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(txtNamSinh, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel7))
+                        .addGap(45, 45, 45)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelErrorSDT)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(cboTrinhDo, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cboViTriUngTuyen, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtSDT, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(79, 79, 79))
             .addGroup(layout.createSequentialGroup()
-                .addGap(172, 172, 172)
+                .addGap(158, 158, 158)
                 .addComponent(btnThemMoi)
                 .addGap(48, 48, 48)
                 .addComponent(btnLamMoi)
@@ -214,23 +230,25 @@ public class ThemHoSoForm extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtNamSinh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
+                .addComponent(labelErrorSDT)
+                .addGap(5, 5, 5)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(cboTrinhDo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                    .addComponent(jLabel10)
+                    .addComponent(txtSDT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cboTrinhDo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cboViTriUngTuyen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(cboTrangThai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(59, 59, 59)
+                .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnThemMoi)
                     .addComponent(btnLamMoi))
-                .addGap(248, 248, 248))
+                .addGap(100, 100, 100))
         );
 
         pack();
@@ -239,8 +257,8 @@ public class ThemHoSoForm extends javax.swing.JDialog {
     private void btnThemMoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemMoiActionPerformed
         boolean isOk = true;
 
-        String hoTen = txtHoTen.getText();
-        if (hoTen.trim().isEmpty()) {
+        String hoTen = txtHoTen.getText().trim();
+        if (hoTen.isEmpty()) {
             labelErrorHoTen.setVisible(true);
             isOk = false;
         } else {
@@ -259,33 +277,40 @@ public class ThemHoSoForm extends javax.swing.JDialog {
             gioiTinh = "Nam";
         }
 
-        String diaChi = txtDiaChi.getText();
-        if (diaChi.trim().isEmpty()) {
+        String diaChi = txtDiaChi.getText().trim();
+        if (diaChi.isEmpty()) {
             labelErrorDiaChi.setVisible(true);
             isOk = false;
         } else {
             labelErrorDiaChi.setVisible(false);
         }
 
-        String namSinh = txtNamSinh.getText();
-        if (namSinh.trim().isEmpty() || !namSinh.matches("\\d+")
-                || (NOW_YEAR - Integer.parseInt(namSinh)) < 24) {
+        String namSinh = txtNamSinh.getText().trim();
+        if (namSinh.isEmpty() || !namSinh.matches("\\d+")
+            || (NOW_YEAR - Integer.parseInt(namSinh)) < 24) {
             labelErrorNamSinh.setVisible(true);
             isOk = false;
         } else {
             labelErrorNamSinh.setVisible(false);
         }
 
-        String trinhDo = cboTrinhDo.getSelectedItem().toString();
-        String viTriUngTuyen = cboViTriUngTuyen.getSelectedItem().toString();
-        String trangThai = cboTrangThai.getSelectedItem().toString();
+        String sdt = txtSDT.getText().trim();
+        if (sdt.isEmpty() || !sdt.matches("^0\\d{9}$")) {
+            labelErrorSDT.setVisible(true);
+            isOk = false;
+        } else {
+            labelErrorSDT.setVisible(false);
+        }
+
+        String trinhDo = cboTrinhDo.getSelectedItem().toString().trim();
+        String viTriUngTuyen = cboViTriUngTuyen.getSelectedItem().toString().trim();
 
         if (isOk) {
             HoSo hoSo = new HoSo(hoTen, gioiTinh, diaChi, Integer.parseInt(namSinh),
-                    trinhDo, viTriUngTuyen, trangThai);
+                sdt, trinhDo, viTriUngTuyen);
             trangChu.themHoSo(hoSo);
             JOptionPane.showMessageDialog(rootPane, "Thêm thành công!",
-                    "Thông báo thêm thành công", JOptionPane.INFORMATION_MESSAGE);
+                "Thông báo thêm thành công", JOptionPane.INFORMATION_MESSAGE);
             trangChu.setVisible(true);
             this.dispose();
         }
@@ -299,10 +324,10 @@ public class ThemHoSoForm extends javax.swing.JDialog {
         txtNamSinh.setText("");
         cboTrinhDo.setSelectedIndex(1);
         cboViTriUngTuyen.setSelectedIndex(0);
-        cboTrangThai.setSelectedIndex(0);
         labelErrorHoTen.setText("");
         labelErrorDiaChi.setText("");
         labelErrorNamSinh.setText("");
+        labelErrorSDT.setVisible(false);
     }//GEN-LAST:event_btnLamMoiActionPerformed
 
     /**
@@ -351,25 +376,26 @@ public class ThemHoSoForm extends javax.swing.JDialog {
     private javax.swing.JButton btnLamMoi;
     private javax.swing.JButton btnThemMoi;
     private javax.swing.ButtonGroup buttonGroupGioiTinh;
-    private javax.swing.JComboBox<String> cboTrangThai;
     private javax.swing.JComboBox<String> cboTrinhDo;
     private javax.swing.JComboBox<String> cboViTriUngTuyen;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel labelErrorDiaChi;
     private javax.swing.JLabel labelErrorHoTen;
     private javax.swing.JLabel labelErrorNamSinh;
+    private javax.swing.JLabel labelErrorSDT;
     private javax.swing.JRadioButton radGioiTinhNam;
     private javax.swing.JRadioButton radGioiTinhNu;
     private javax.swing.JTextField txtDiaChi;
     private javax.swing.JTextField txtHoTen;
     private javax.swing.JTextField txtNamSinh;
+    private javax.swing.JTextField txtSDT;
     // End of variables declaration//GEN-END:variables
 
 }

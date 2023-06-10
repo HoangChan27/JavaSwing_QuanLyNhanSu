@@ -45,7 +45,6 @@ public class SuaTinForm extends javax.swing.JDialog {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        btnQuayLai = new javax.swing.JButton();
         labelErrorViTri = new javax.swing.JLabel();
         txtViTri = new javax.swing.JTextField();
         labelViTri = new javax.swing.JLabel();
@@ -65,52 +64,46 @@ public class SuaTinForm extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
         jLabel1.setText("Sửa tin tuyển dụng");
-
-        btnQuayLai.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnQuayLai.setText("Quay lại");
-        btnQuayLai.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnQuayLaiActionPerformed(evt);
-            }
-        });
 
         labelErrorViTri.setForeground(new java.awt.Color(255, 0, 51));
         labelErrorViTri.setText("Vị trí tuyển dụng không được trống!");
 
-        txtViTri.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtViTri.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
-        labelViTri.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        labelViTri.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         labelViTri.setText("Vị trí tuyển dụng:");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel3.setText("Yêu cầu tuyển dụng:");
 
         labelErrorYeuCau.setForeground(new java.awt.Color(255, 0, 51));
         labelErrorYeuCau.setText("Yêu cầu tuyển dụng không được trống!");
 
-        txtYeuCau.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtYeuCau.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
         labelErrorSoLuong.setForeground(new java.awt.Color(255, 0, 51));
         labelErrorSoLuong.setText("Số lượng không được trống, chỉ chứa số và phải > 0!");
 
-        txtSoLuong.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtSoLuong.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         txtSoLuong.setText("1");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel4.setText("Số lượng tuyển dụng:");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel5.setText("Hạn nộp hồ sơ:");
 
-        txtHanNop.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtHanNop.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         txtHanNop.setText("13/06/2023");
 
         labelErrorHanNop.setForeground(new java.awt.Color(255, 0, 51));
         labelErrorHanNop.setText("Hạn nộp hồ sơ không hợp lệ, vui lòng nhập ngày/tháng/năm! (VD: 13/06/2023)");
 
-        btnCapNhat.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnCapNhat.setBackground(new java.awt.Color(102, 204, 0));
+        btnCapNhat.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        btnCapNhat.setForeground(new java.awt.Color(255, 255, 255));
         btnCapNhat.setText("Cập nhật");
         btnCapNhat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,7 +111,9 @@ public class SuaTinForm extends javax.swing.JDialog {
             }
         });
 
-        btnLamMoi.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnLamMoi.setBackground(new java.awt.Color(153, 153, 153));
+        btnLamMoi.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        btnLamMoi.setForeground(new java.awt.Color(255, 255, 255));
         btnLamMoi.setText("Làm mới");
         btnLamMoi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,62 +121,60 @@ public class SuaTinForm extends javax.swing.JDialog {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel2.setText("Mã tin:");
 
-        txtMaTin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtMaTin.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtMaTin.setEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(107, 107, 107)
+                .addComponent(jLabel5)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(labelErrorHanNop)
+                    .addComponent(txtHanNop, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+                    .addComponent(txtSoLuong))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(41, Short.MAX_VALUE)
+                .addContainerGap(65, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jLabel5)
-                        .addGap(18, 18, 18)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelErrorHanNop)
-                            .addComponent(txtHanNop, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(231, 231, 231)
                                 .addComponent(btnCapNhat)
-                                .addGap(95, 95, 95)
-                                .addComponent(btnLamMoi))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(labelViTri)
-                            .addComponent(jLabel2))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(labelErrorSoLuong)
-                            .addComponent(txtViTri, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtYeuCau, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtSoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelErrorYeuCau)
-                            .addComponent(labelErrorViTri)
-                            .addComponent(txtMaTin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(46, 46, 46)
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnQuayLai)))))
-                .addGap(49, 49, 49))
+                                .addGap(63, 63, 63)
+                                .addComponent(btnLamMoi))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4)
+                                    .addComponent(labelViTri)
+                                    .addComponent(jLabel2))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(labelErrorSoLuong)
+                                    .addComponent(labelErrorYeuCau)
+                                    .addComponent(labelErrorViTri)
+                                    .addComponent(txtYeuCau)
+                                    .addComponent(txtViTri)
+                                    .addComponent(txtMaTin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(71, 71, 71))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(242, 242, 242))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnQuayLai))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jLabel1)))
-                .addGap(27, 27, 27)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtMaTin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -203,49 +196,45 @@ public class SuaTinForm extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtSoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
-                .addGap(17, 17, 17)
+                .addGap(18, 18, 18)
                 .addComponent(labelErrorHanNop)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtHanNop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
-                .addGap(33, 33, 33)
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCapNhat)
                     .addComponent(btnLamMoi))
-                .addContainerGap(131, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnQuayLaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuayLaiActionPerformed
-        this.dispose();
-    }//GEN-LAST:event_btnQuayLaiActionPerformed
-
     private void btnCapNhatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCapNhatActionPerformed
-        String maTin = txtMaTin.getText();
-        String viTri = txtViTri.getText();
-        String yeuCau = txtYeuCau.getText();
-        String soLuongTuyenDung = txtSoLuong.getText();
-        String hanNopHoSo = txtHanNop.getText();
+        String maTin = txtMaTin.getText().trim();
+        String viTri = txtViTri.getText().trim();
+        String yeuCau = txtYeuCau.getText().trim();
+        String soLuongTuyenDung = txtSoLuong.getText().trim();
+        String hanNopHoSo = txtHanNop.getText().trim();
         boolean isOk = true;
 
-        if (viTri.trim().isEmpty()) {
+        if (viTri.isEmpty()) {
             labelErrorViTri.setVisible(true);
             isOk = false;
         } else {
             labelErrorViTri.setVisible(false);
         }
 
-        if (yeuCau.trim().isEmpty()) {
+        if (yeuCau.isEmpty()) {
             labelErrorYeuCau.setVisible(true);
             isOk = false;
         } else {
             labelErrorYeuCau.setVisible(false);
         }
 
-        if (soLuongTuyenDung.trim().isEmpty() || !soLuongTuyenDung.matches("\\d+")) {
+        if (soLuongTuyenDung.isEmpty() || !soLuongTuyenDung.matches("\\d+")) {
             labelErrorSoLuong.setVisible(true);
             isOk = false;
         } else {
@@ -257,7 +246,7 @@ public class SuaTinForm extends javax.swing.JDialog {
             }
         }
 
-        if (hanNopHoSo.trim().isEmpty()) {
+        if (hanNopHoSo.isEmpty()) {
             labelErrorHanNop.setVisible(true);
             isOk = false;
         } else {
@@ -347,7 +336,6 @@ public class SuaTinForm extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCapNhat;
     private javax.swing.JButton btnLamMoi;
-    private javax.swing.JButton btnQuayLai;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

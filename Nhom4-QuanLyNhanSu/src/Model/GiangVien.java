@@ -4,13 +4,15 @@
  */
 package Model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Hoang
  */
-public class GiangVien extends NhanSu {
+public class GiangVien extends NhanSu implements Serializable {
 
-    private Khoa khoa;
+    private String khoa;
     private int soTietDay;
     private long donGia;
 
@@ -20,31 +22,21 @@ public class GiangVien extends NhanSu {
         donGia = 0;
     }
 
-    public GiangVien(Khoa khoa) {
+    public GiangVien(String khoa) {
         this.khoa = khoa;
     }
     
-    public GiangVien(Khoa khoa, int soTietDay, long donGia) {
+    public GiangVien(String khoa, int soTietDay, long donGia) {
         this.khoa = khoa;
         this.soTietDay = soTietDay;
         this.donGia = donGia;
     }
 
-    public GiangVien(String maNhanSu, String hoTen, String gioiTinh, Integer namSinh, String diaChi, Khoa khoa, int soTietDay, long donGia) {
-        super(maNhanSu, hoTen, gioiTinh, namSinh, diaChi);
-        this.khoa = khoa;
-        this.soTietDay = soTietDay;
-        this.donGia = donGia;
-    }
-
-    public Khoa getKhoa() {
+    public String getKhoa() {
         return khoa;
     }
 
-    public void setKhoa(Khoa khoa) throws Exception {
-        if (khoa == null) {
-            throw new Exception("Khoa không được để trống!");
-        }
+    public void setKhoa(String khoa) throws Exception {
         this.khoa = khoa;
     }
 
@@ -52,18 +44,7 @@ public class GiangVien extends NhanSu {
         return soTietDay;
     }
 
-    public void setSoTietDay(Integer soTietDay) throws Exception {
-        if (soTietDay.toString().trim().isEmpty()) {
-            throw new Exception("Số tiết dạy không được trống!");
-        } else {
-            if (soTietDay.toString().matches("\\d+")) {
-                throw new Exception("Số tiết dạy chỉ được chứa số!");
-            } else {
-                if (soTietDay < 0) {
-                    throw new Exception("Số tiết dạy phải >= 0!");
-                }
-            }
-        }
+    public void setSoTietDay(Integer soTietDay) {
         this.soTietDay = soTietDay;
     }
 
@@ -71,18 +52,7 @@ public class GiangVien extends NhanSu {
         return donGia;
     }
 
-    public void setDonGia(Long donGia) throws Exception {
-        if (donGia.toString().trim().isEmpty()) {
-            throw new Exception("Đơn giá không được trống!");
-        } else {
-            if (donGia.toString().matches("\\d+")) {
-                throw new Exception("Đơn giá chỉ được chứa số!");
-            } else {
-                if (donGia < 50000) {
-                    throw new Exception("Đơn giá phải >= 50000!");
-                }
-            }
-        }
+    public void setDonGia(Long donGia) {
         this.donGia = donGia;
     }
 
